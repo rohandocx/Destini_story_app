@@ -21,7 +21,7 @@ class StoryPage extends StatefulWidget {
 }
 
 class _StoryPageState extends State<StoryPage> {
-
+int storyNumber =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,6 +55,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 2,
                 child: FlatButton(
                   onPressed: () {
+                    print('option1 preesed');
                    setState((){
                      storyBrain.nextStory(1);
                    });
@@ -77,7 +78,10 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: FlatButton(
                   onPressed: () {
-                    storyBrain.nextStory(2);
+                    setState((){
+                      print('option 2 was pressed');
+                      storyBrain.nextStory(2);
+                    });
                   },
                   color: Colors.blue,
                   child: Text(

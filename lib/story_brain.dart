@@ -35,13 +35,16 @@ List<Story> _storyData = [
 ];
 
 String getStory(){
-return  _storyData[0].storytitle;
+
+return  _storyData[_storyNumber].storytitle;
 }
 String getchoice1(){
-  return _storyData[0].choice1;
+
+  return _storyData[_storyNumber].choice1;
 }
 String getchoice2(){
-  return _storyData[0].choice2;
+
+  return _storyData[_storyNumber].choice2;
 }
 
 void nextStory(int choiceNumber) {
